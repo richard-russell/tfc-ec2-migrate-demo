@@ -6,7 +6,7 @@ resource "aws_vpc" "my_vpc" {
   cidr_block = "172.16.0.0/16"
 
   tags = {
-    Name = "migrated"
+    Name = "migrate-me"
   }
 }
 
@@ -16,7 +16,7 @@ resource "aws_subnet" "my_subnet" {
   availability_zone = "eu-west-1a"
 
   tags = {
-    Name = "migrated"
+    Name = "migrate-me"
   }
 }
 
@@ -42,7 +42,7 @@ resource "aws_instance" "web" {
   subnet_id     = aws_subnet.my_subnet.id
 
   tags = {
-    Name = "migrated"
+    Name = "migrate-me"
   }
 }
 
